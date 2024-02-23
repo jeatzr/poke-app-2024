@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import { getPokes } from './services/pokeapi'
-import SearchBox from './components/SearchBox/SearchBox';
-import CardList from './components/CardList/CardList';
-//const URL_POKE = "https://pokeapi.co/api/v2/pokemon?limit=500"
+import './Search.css';
+import { getPokes } from '../../services/pokeapi'
+import SearchBox from '../../components/SearchBox/SearchBox';
+import CardList from '../../components/CardList/CardList';
 
 //declaramos el componente App como función
-function App() {
+function Search() {
 
   //Inicializamos el estado del componente con hooks
   const [pokes, setPokes] = useState([]);
@@ -43,4 +42,4 @@ function App() {
   );
 }
 
-export default App;
+export default Search;
