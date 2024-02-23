@@ -5,6 +5,7 @@ import Main from './screens/Main/Main';
 import Error from './screens/Error/Error';
 import Details from './screens/Details/Details';
 import About from './screens/About/About';
+import Welcome from './screens/Welcome/Welcome';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -12,20 +13,26 @@ const router = createBrowserRouter([
     path: "/",
     element: <Main />,
     errorElement: <Error />,
-    children: [{
-      path: "/search",
-      element: <Search />,
-    },
-    {
-      path: "/about",
-      element: <About />
-    }
+    children: [
+      {
+        path: "/",
+        element: <Welcome />,
+      },
+      {
+        path: "/search",
+        element: <Search />,
+      },
+      {
+        path: "/about",
+        element: <About />
+      },
+      {
+        path: "/pokemon/:pokemonName",
+        element: <Details />
+      }
     ],
   },
-  {
-    path: "/pokemon/:pokemonName",
-    element: <Details />
-  }
+
 ]);
 
 ReactDOM.render(

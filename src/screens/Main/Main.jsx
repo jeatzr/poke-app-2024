@@ -5,10 +5,12 @@ export default function Main() {
   return (
     <>
       <div>
-        <h3>Menú Pokemon:</h3>
+        <Link to="/">
+          <h1>Poke-App</h1>
+        </Link>
         <ul>
-          <li><Link to={'search'}>Búsqueda</Link></li>
-          <li><Link to={'about'}>A cerca de</Link></li>
+          <li><Link to={'search'}>Search Pokemon</Link></li>
+          <li><Link to={'about'}>About</Link></li>
         </ul>
       </div>
       <Outlet />

@@ -31,9 +31,9 @@ function Search() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Mi Poke App</h1>
+        <h3>Search a Pokemon</h3>
         <SearchBox
-          placeholder="Búsqueda Pokemon"
+          placeholder="Write a pokemon name"
           onSearchChange={onSearchChange}
         />
         <CardList pokes={filteredPokemons} />
